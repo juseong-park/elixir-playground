@@ -1,5 +1,5 @@
 defmodule Solution do
-  def fizzbuzzList(n), do: (1..n) |> Enum.map(&fizzbuzz/1)
+  def fizzbuzzList(n), do: 1..n |> Enum.map(&fizzbuzz/1)
   def fizzbuzz(n), do: _func(n, rem(n, 3), rem(n, 5))
 
   defp _func(_n, 0, 0), do: "FizzBuzz"
@@ -8,8 +8,8 @@ defmodule Solution do
   defp _func(n, _, _), do: "#{n}"
 end
 
-IO.puts Solution.fizzbuzz(15)
-IO.puts Solution.fizzbuzz(12)
-IO.puts Solution.fizzbuzz(10)
+IO.puts(Solution.fizzbuzz(15))
+IO.puts(Solution.fizzbuzz(12))
+IO.puts(Solution.fizzbuzz(10))
 
-IO.inspect Solution.fizzbuzzList(15)
+IO.inspect(Solution.fizzbuzzList(15))
